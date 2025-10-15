@@ -15,5 +15,8 @@ public class Application {
         // 숫자 배열로 나누기
         List<Integer> numbers = splitter.splitToNumbers(inputStr);
 
+
+
+        System.out.println(numbers);
     }
 }
