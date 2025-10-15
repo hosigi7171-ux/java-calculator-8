@@ -6,6 +6,7 @@ public class Application {
     public static void main(String[] args) {
         InputReader inputReader = new InputReader();
         StringSplitter splitter = new StringSplitter();
+        Adder adder = new Adder();
         
         String inputStr; // 입력받는 문자열
         
@@ -15,8 +16,8 @@ public class Application {
         // 숫자 배열로 나누기
         List<Integer> numbers = splitter.splitToNumbers(inputStr);
 
-
-
-        System.out.println(numbers);
+        // 숫자 배열로 합을 구하기
+        int sum = 0;
+        sum = adder.sumIntList(numbers);
     }
 }
