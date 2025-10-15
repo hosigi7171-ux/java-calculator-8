@@ -19,5 +19,8 @@ public class Application {
         // 숫자 배열로 합을 구하기
         int sum = 0;
         sum = adder.sumIntList(numbers);
+
+        // 결과 출력
+        ResultPrinter.print(sum);
     }
 }
