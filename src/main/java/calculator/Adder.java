@@ -8,7 +8,7 @@ public class Adder {
      * @param numbers 정수 리스트
      * @return 정수들의 합
      */
-    public int sumIntList(List<Integer> numbers){
+    public static int sumIntList(List<Integer> numbers){
         int sum = 0;
         for(int num : numbers){
             sum += num;

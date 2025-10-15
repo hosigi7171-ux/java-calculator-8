@@ -9,7 +9,7 @@ public class StringSplitter {
      * @param inputStr 분리할 문자열
      * @return 구분자로 나눈 숫자 리스트
      */
-    public List<Integer> splitToNumbers(String inputStr){
+    public static List<Integer> splitToNumbers(String inputStr){
         List<Integer> numbers = new ArrayList<>();
         
         if(inputStr == null || inputStr.isEmpty()){
@@ -48,7 +48,7 @@ public class StringSplitter {
      * @param inputStr 입력받은 문자열
      * @return 커스텀 구분자가 없으면 null 리턴, 있으면 해당 구분자 리턴
      */
-    private Character getCustomDelimiter(String inputStr){
+    private static Character getCustomDelimiter(String inputStr){
         // 커스텀 구분자가 없는 경우
         if(inputStr.length() < 5){
             return null;
