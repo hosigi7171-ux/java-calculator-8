@@ -1,25 +1,14 @@
 package calculator;
 
-import java.util.List;
-
 public class Application {
     public static void main(String[] args) {
-        String inputStr; // 입력받는 문자열
+        // 문자열 입력받기 : 입력
+        String inputStr = InputReader.read();
         
-        // 문자열 입력받기
-        inputStr = InputReader.read();
-        
-        // 입력받은 문자열 유효한지 체크 아니면 throw exception
-        InputValidator.checkValid(inputStr);
-        
-        // 숫자 배열로 나누기
-        List<Integer> numbers = StringSplitter.splitToNumbers(inputStr);
-
-        // 숫자 배열로 합을 구하기
-        int sum = 0;
-        sum = Adder.sumIntList(numbers);
+        // 문자열 계산값 구하기 : 검증 + 분리 + 계산 과정 포함
+        int sumResult = Calculator.calculate(inputStr);
 
         // 결과 출력
-        ResultPrinter.print(sum);
+        ResultPrinter.print(sumResult);
     }
 }
