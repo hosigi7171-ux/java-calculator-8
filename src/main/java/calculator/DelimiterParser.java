@@ -6,6 +6,8 @@ import static calculator.DelimiterConstants.DEFAULT_DELIMITER_COLON;
 import static calculator.DelimiterConstants.DEFAULT_DELIMITER_COMMA;
 
 public class DelimiterParser {
+    private static final int prefixLength = CUSTOM_FORMAT_PREFIX.length();
+    private static final int suffixLength = CUSTOM_FORMAT_SUFFIX.length();
 
     /**
      * 커스텀 구분자를 식별하여 리턴하는 메서드
@@ -17,9 +19,6 @@ public class DelimiterParser {
         if(!inputStr.startsWith(CUSTOM_FORMAT_PREFIX)){
             return null;
         }
-
-        final int prefixLength = CUSTOM_FORMAT_PREFIX.length();
-        final int suffixLength = CUSTOM_FORMAT_SUFFIX.length();
 
         // 커스텀 구분자가 아예 포맷보다 더 적은 내용을 입력받은 경우
         if(inputStr.length() < prefixLength + 1 + suffixLength){
@@ -49,7 +48,7 @@ public class DelimiterParser {
         // 커스텀 문자열 포맷이 없으면 그냥 리턴
         if(custom == null) return inputStr;
 
-        return inputStr.substring(CUSTOM_FORMAT_PREFIX.length() + 1 +CUSTOM_FORMAT_SUFFIX.length());
+        return inputStr.substring(prefixLength + 1 + suffixLength);
     }
 
 
